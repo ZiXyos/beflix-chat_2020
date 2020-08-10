@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const ChatRoomSchema = new Schema({
+const ChatroomSchema = new Schema({
 
     name: {
         type: String,
@@ -9,4 +9,4 @@ const ChatRoomSchema = new Schema({
     }
 });
 
-module.exports = ChatRoom = mongoose.model("Chatroom", ChatRoomSchema);
+module.exports = Chatroom = mongoose.model("chatroom", ChatroomSchema);

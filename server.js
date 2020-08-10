@@ -34,5 +34,9 @@ app.use(passport.initialize());
 
 require("./Config/passport")(passport);
 
+app.use("/user", require("./Routes/Api/users"));
+app.use('/chatRoom', require("./Routes/Api/chatroom"));
+
+
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server up and running on port ${port} 🔥!`));

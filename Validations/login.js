@@ -1,7 +1,7 @@
 const Validator = require("validator");
 const isEmpty = require("is-empty");
 
-module.exports= function validateLoginInput(data) {
+module.exports = function validateLoginInput(data) {
 
     let errors = {};
 
@@ -15,4 +15,15 @@ module.exports= function validateLoginInput(data) {
 
         errors.email = "Bah nan ducoup tu t'es trompé bg";
     }
-}
+
+    if(Validator.isEmpty(data.password)) {
+
+        errors.password = "Oe Nan Faut Mettre un MDP LA fdp"
+    }
+
+    return ({
+
+        errors,
+        isValid: isEmpty(errors)
+    });
+};
